@@ -100,6 +100,23 @@ div#mbwph-contact {
 .mbwph-button-icon-animation {
     opacity: 1;
 }
+.mbwph-close-button-icon {
+    color: #fff;
+    opacity: 0;
+    visibility: visible;
+    -webkit-transform: rotate(180deg) scale(0);
+    -ms-transform: rotate(180deg) scale(0);
+    transform: rotate(180deg) scale(0);
+    -webkit-transition: ease-in .12s all;
+    -o-transition: ease-in .12s all;
+    transition: ease-in .12s all;
+    display: block;
+}
+.mbwph-close-button-icon.isShowCloseButton {
+    -webkit-transform: rotate(0) scale(1);
+    -ms-transform: rotate(0) scale(1);
+    transform: rotate(0) scale(1);
+}
 .mbwph-contact-header {
     padding: 17px 15px;
     color: #FFFFFF;
@@ -322,7 +339,7 @@ display: none!important;
     background-position: center;
     position: absolute;
     right: 0;
-    bottom: 110px;
+    bottom: 60px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -335,8 +352,8 @@ display: none!important;
     border-radius: 7px;
     z-index: 1000000;
     transform: scale(1);
-    /* opacity: 0; */
-    /* visibility: hidden; */
+    opacity: 0;
+    visibility: hidden;
 }
 .mbwph-call ul li {
     margin: 0;
@@ -466,6 +483,11 @@ img.cc-user-img-c {
     opacity: 1;
     transition: .4s;
 }
+.isHideElement {
+    opacity: 0;
+    visibility: hidden;
+    transition: .4s;
+}
 .isHideGreeting {
     opacity: 0;
     visibility: hidden;
@@ -476,7 +498,16 @@ img.cc-user-img-c {
     visibility: hidden;
     transition: .4s;
 }
-
+.isShowCallList {
+    opacity: 1!important;
+    visibility: visible!important;
+    transition: .4s;
+}
+.isShowCloseButton {
+    opacity: 1!important;
+    visibility: visible!important;
+    transition: .4s;
+}
 @-webkit-keyframes mbwph-pulse {
     0% {
       -webkit-transform:scale(0);

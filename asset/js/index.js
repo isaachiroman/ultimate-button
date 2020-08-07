@@ -3,10 +3,23 @@ jQuery(document).ready(function($){
   //Start show hide contact button
   $(".mbwph-contact-button").click(function() {
     $(".mbwph-contact-container").toggleClass("isButtonShow");
+    $(".mbwph-close-button-icon").toggleClass("isShowCloseButton");
   });
   $(".mbwph-header-close").click(function() {
     $(".mbwph-contact-container").removeClass("isButtonShow");
   });
+  $(function(){
+    var buttonIcon = $(document).find("isButtonShow");
+    if ( !buttonIcon ) {
+      // $(".mbwph-button-icon").addClass("isHideElement");
+      // $(".mbwph-button-icon").addClass("isHiderElement");
+      // toggleRedClass();
+      alert("ll");
+    } 
+    else {
+      toggleRedClass();
+    }
+  })
   $(function() {
       $(".mbwph-contact-tawkto").click(function() {
         if ($("iframe").contents().find("body").contents().length > 0) {
@@ -25,7 +38,10 @@ jQuery(document).ready(function($){
   $(".mbwph-contact-close-greeting").click(function() {
     $(".mbwph-contact-greeting").addClass("isHideGreeting");
   });
-
+  $(".mbwph-call-main").click(function() {
+    $(".mbwph-call-list").toggleClass("isShowCallList");
+  });
+  
   //Hide button when click anywhere
   $(document).mouseup(function(e) {
     var container = $(".mbwph-social");
@@ -37,7 +53,7 @@ jQuery(document).ready(function($){
   //End show hide contact button
 
   //Start list button icon
-  toggleRedClass();
+  // toggleRedClass();
   function toggleRedClass() {
     var icons = $('.mbwph-button-icon');
     var iconsLength = icons.length;
