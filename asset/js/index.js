@@ -4,22 +4,28 @@ jQuery(document).ready(function($){
   $(".mbwph-contact-button").click(function() {
     $(".mbwph-contact-container").toggleClass("isButtonShow");
     $(".mbwph-close-button-icon").toggleClass("isShowCloseButton");
+    $(".mbwph-button-group-icon").toggleClass("isHideGroupIcon");
   });
   $(".mbwph-header-close").click(function() {
     $(".mbwph-contact-container").removeClass("isButtonShow");
+    $(".mbwph-close-button-icon").removeClass("isShowCloseButton");
+    $(".mbwph-button-group-icon").removeClass("isHideGroupIcon");
   });
-  $(function(){
-    var buttonIcon = $(document).find("isButtonShow");
-    if ( !buttonIcon ) {
-      // $(".mbwph-button-icon").addClass("isHideElement");
-      // $(".mbwph-button-icon").addClass("isHiderElement");
-      // toggleRedClass();
-      alert("ll");
-    } 
-    else {
-      toggleRedClass();
-    }
-  })
+  // $(function(){
+  //   var isOpenPopup = $('.isButtonShow')[0];
+  //   if ( !isOpenPopup ) {
+  //     toggleRedClass();
+
+  //   } 
+  //   else {
+  //     $(".mbwph-call-list").removeClass("isShowCallList");
+  //   }
+
+  //   // if () {
+
+  //   // }
+
+  // })
   $(function() {
       $(".mbwph-contact-tawkto").click(function() {
         if ($("iframe").contents().find("body").contents().length > 0) {
@@ -40,6 +46,8 @@ jQuery(document).ready(function($){
   });
   $(".mbwph-call-main").click(function() {
     $(".mbwph-call-list").toggleClass("isShowCallList");
+    $(".mbwph-call-button-icon-child").toggleClass("isHideElement");
+    $(".mbwph-close-call-button-icon").toggleClass("isShowCloseButton");
   });
   
   //Hide button when click anywhere
@@ -48,12 +56,14 @@ jQuery(document).ready(function($){
     var closeButton = $(".mbwph-header-close");
     if (!container.is(e.target) && container.has(e.target).length === 0) {
       $(".mbwph-contact-container").removeClass("isButtonShow");
+      $(".mbwph-button-group-icon").removeClass("isHideGroupIcon");
+      $(".mbwph-close-button-icon").removeClass("isShowCloseButton");
     }
   });
   //End show hide contact button
 
   //Start list button icon
-  // toggleRedClass();
+  toggleRedClass();
   function toggleRedClass() {
     var icons = $('.mbwph-button-icon');
     var iconsLength = icons.length;
