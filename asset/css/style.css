@@ -690,6 +690,9 @@ img.cc-user-img-c {
     .mbwph-contact-button {
         right: 20px;
     }
+    .mbwph-call-main {
+        right: -10px;
+    }
     .mbwph-btt {
         right: 25px;
     }
