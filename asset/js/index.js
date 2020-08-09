@@ -62,6 +62,7 @@ jQuery(document).ready(function($){
     }
     if (!callBtn.is(e.target) && callBtn.has(e.target).length === 0) {
       $(".mbwph-call-list").removeClass("isShowCallList");
+      $(".mbwph-close-call-button-icon").removeClass("isShowCloseButton");
     }
   });
   //End show hide contact button
