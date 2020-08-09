@@ -555,7 +555,7 @@ img.cc-user-img-c {
     opacity: 1!important;
     visibility: visible!important;
     transition: .4s!important;
-    webkit-transform: scale(1)!important;
+    -webkit-transform: scale(1)!important;
     -ms-transform: scale(1)!important;
     transform: scale(1)!important;
 }

@@ -11,6 +11,14 @@ jQuery(document).ready(function($){
     $(".mbwph-close-button-icon").removeClass("isShowCloseButton");
     $(".mbwph-button-group-icon").removeClass("isHideGroupIcon");
   });
+  $(".mbwph-contact-close-greeting").click(function() {
+    $(".mbwph-contact-greeting").addClass("isHideGreeting");
+  });
+  $(".mbwph-call-main").click(function() {
+    $(".mbwph-call-list").toggleClass("isShowCallList");
+    $(".mbwph-call-button-icon-child").toggleClass("isHideElement");
+    $(".mbwph-close-call-button-icon").toggleClass("isShowCloseButton");
+  });
   // $(function(){
   //   var isOpenPopup = $('.isButtonShow')[0];
   //   if ( !isOpenPopup ) {
@@ -41,23 +49,19 @@ jQuery(document).ready(function($){
         $(".mbwph-contact-container").removeClass("isButtonShow");
       });
   });
-  $(".mbwph-contact-close-greeting").click(function() {
-    $(".mbwph-contact-greeting").addClass("isHideGreeting");
-  });
-  $(".mbwph-call-main").click(function() {
-    $(".mbwph-call-list").toggleClass("isShowCallList");
-    $(".mbwph-call-button-icon-child").toggleClass("isHideElement");
-    $(".mbwph-close-call-button-icon").toggleClass("isShowCloseButton");
-  });
+  
   
   //Hide button when click anywhere
   $(document).mouseup(function(e) {
-    var container = $(".mbwph-social");
-    var closeButton = $(".mbwph-header-close");
-    if (!container.is(e.target) && container.has(e.target).length === 0) {
+    var socialBtn = $(".mbwph-social");
+    var callBtn = $(".mbwph-btn-call");
+    if (!socialBtn.is(e.target) && socialBtn.has(e.target).length === 0) {
       $(".mbwph-contact-container").removeClass("isButtonShow");
       $(".mbwph-button-group-icon").removeClass("isHideGroupIcon");
       $(".mbwph-close-button-icon").removeClass("isShowCloseButton");
+    }
+    if (!callBtn.is(e.target) && callBtn.has(e.target).length === 0) {
+      $(".mbwph-call-list").removeClass("isShowCallList");
     }
   });
   //End show hide contact button
