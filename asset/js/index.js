@@ -38,6 +38,7 @@ jQuery(document).ready(function($){
       FB.CustomerChat.showDialog();
       $(".mbwph-main-contact").addClass("isHideElement");
       $(".mbwph-call-main").addClass("isHideElement");
+      localStorage.setItem('MBWPH_FBC', isOpen);
     }
 
   });
