@@ -362,7 +362,6 @@ display: none!important;
 }
 .mbwph-fbc > #fb-root > .fb-customerchat > span > iframe {
     z-index: 2147483647!important;
-    bottom: 5px!important;
 }
 .mbwph-fbc{
     display: none;
