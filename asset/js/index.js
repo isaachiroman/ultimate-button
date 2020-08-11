@@ -44,7 +44,7 @@ jQuery(document).ready(function($){
       console.log("retrievedObject: ", JSON.parse(fbcStatus));
     }
     var fbcStatus = localStorage.getItem('__fb_chat_plugin');
-    console.log(JSON.parse(fbcStatus)['__fb_chat_plugin']['visibility']);
+    console.log(JSON.parse(fbcStatus)['visibility']);
     // if (isOpen == false) {
     //   $(".mbwph-call-main").removeClass("isHideElement");
     // }
