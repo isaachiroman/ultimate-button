@@ -31,9 +31,12 @@ jQuery(document).ready(function($){
       event.preventDefault();
       $(".mbwph-fbc").addClass("isFbcShow");
       // FB.CustomerChat.showDialog();
-      FB.Event.subscribe('customerchat.dialogShow', callback());
+      FB.Event.subscribe('customerchat.dialogShow', showFBCPopup());
       $(".mbwph-contact-container").removeClass("isButtonShow");
     });
+    function showFBCPopup() {
+      FB.CustomerChat.showDialog();
+    }
 
   });
   //Hide button when click anywhere
