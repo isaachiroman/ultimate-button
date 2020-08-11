@@ -19,38 +19,23 @@ jQuery(document).ready(function($){
     $(".mbwph-call-button-icon-child").toggleClass("isHideElement");
     $(".mbwph-close-call-button-icon").toggleClass("isShowCloseButton");
   });
-  // $(function(){
-  //   var isOpenPopup = $('.isButtonShow')[0];
-  //   if ( !isOpenPopup ) {
-  //     toggleRedClass();
-
-  //   } 
-  //   else {
-  //     $(".mbwph-call-list").removeClass("isShowCallList");
-  //   }
-
-  //   // if () {
-
-  //   // }
-
-  // })
   $(function() {
-      $(".mbwph-contact-tawkto").click(function() {
-        if ($("iframe").contents().find("body").contents().length > 0) {
-            $(".mbwph-contact-container").removeClass("isButtonShow");
-            $(".mbwph-main-contact").addClass("isHideMWPContact");
-            $(".mbwph-contact-greeting").addClass("isHideGreeting");
-          }
-      });
-      $(".mbwph-contact-messenger").click(function(event) {
-        event.preventDefault();
-        $(".mbwph-fbc").addClass("isFbcShow");
-        FB.CustomerChat.showDialog();
-        $(".mbwph-contact-container").removeClass("isButtonShow");
-      });
+    $(".mbwph-contact-tawkto").click(function() {
+      if ($("iframe").contents().find("body").contents().length > 0) {
+          $(".mbwph-contact-container").removeClass("isButtonShow");
+          $(".mbwph-main-contact").addClass("isHideMWPContact");
+          $(".mbwph-contact-greeting").addClass("isHideGreeting");
+        }
+    });
+    $(".mbwph-contact-messenger").click(function(event) {
+      event.preventDefault();
+      $(".mbwph-fbc").addClass("isFbcShow");
+      // FB.CustomerChat.showDialog();
+      FB.Event.subscribe('customerchat.dialogShow', callback());
+      $(".mbwph-contact-container").removeClass("isButtonShow");
+    });
+
   });
-  
-  
   //Hide button when click anywhere
   $(document).mouseup(function(e) {
     var socialBtn = $(".mbwph-social");
@@ -88,23 +73,6 @@ jQuery(document).ready(function($){
     }, 2000);
   }
   //End list button icon
-  
-  //Start show hide Tooltip
-  // $( ".mbwph-tooltip" ).hover(
-  //   function() {   
-  //   var tooltip = $(this).attr("data-title");
-  //     $('<div/>', {
-  //         text: tooltip,
-  //         class: 'tooltipBox'
-  //     }).appendTo(this); 
-  //   if ($('.mbwph-contact').hasClass('mbwph-ct-right')) {
-  //     $(".tooltipBox").addClass('isTooltipBoxRight');
-  //   }
-  //   }, function() {
-  //     $(document).find("div.tooltipBox").remove();
-  //   }
-  // );
-  //End show hide Tooltip
 
   //Start show hide scrollToTop
   $(window).scroll(function() {
