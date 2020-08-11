@@ -40,12 +40,13 @@ jQuery(document).ready(function($){
       $(".mbwph-main-contact").addClass("isHideElement");
       $(".mbwph-call-main").addClass("isHideElement");
       localStorage.setItem('MBWPH_FBC', isOpen);
-      isOpen = false;
-      console.log(isOpen);
+      isOpen = true;
     }
-    if (isOpen == false) {
-      $(".mbwph-call-main").removeClass("isHideElement");
-    }
+    var fbcStatus = localStorage.getItem('__fb_chat_plugin');
+    console.log("retrievedObject: ", JSON.parse(fbcStatus));
+    // if (isOpen == false) {
+    //   $(".mbwph-call-main").removeClass("isHideElement");
+    // }
 
   });
   //Hide button when click anywhere
