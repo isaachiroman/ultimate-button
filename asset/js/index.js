@@ -40,7 +40,7 @@ jQuery(document).ready(function($){
       $(".mbwph-main-contact").addClass("isHideElement");
       $(".mbwph-call-main").addClass("isHideElement");
       localStorage.setItem('MBWPH_FBC', isOpen);
-      alert(localStorage.getItem('_fb_chat_plugin'));
+      alert(localStorage.getItem('MBWPH_FBC'));
     }
 
   });
