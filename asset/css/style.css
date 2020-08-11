@@ -348,8 +348,8 @@ span img {
 }
 
 .mbwph-fbc > #fb-root > .fb_dialog {
-    z-index: 99!important;
-    display: none!important;
+    /* z-index: 99!important; */
+    /* display: none!important; */
 }
 /* .mbwph-fbc > #fb-root > .fb_dialog.fb_dialog_advanced.fb_customer_chat_bubble_animated_no_badge.fb_customer_chat_bubble_pop_in {
 display: none!important;
@@ -358,7 +358,7 @@ display: none!important;
 display: none!important;
 } */
 .mbwph-fbc > #fb-root > .fb-customerchat > iframe.fb_customer_chat_bounce_in_v2 {
-    bottom: 0px!important;
+    /* bottom: 0px!important; */
 }
 .mbwph-fbc > #fb-root > .fb-customerchat > span > iframe {
     z-index: 2147483647!important;
