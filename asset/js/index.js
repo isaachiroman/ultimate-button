@@ -43,8 +43,8 @@ jQuery(document).ready(function($){
       isOpen = true;
       console.log("retrievedObject: ", JSON.parse(fbcStatus));
     }
-    var fbcStatus = localStorage.getItem('__fb_chat_plugin');
-    console.log("retrievedObject: ", JSON.parse(fbcStatus));
+    var fbcStatus = Json.parse(localStorage.getItem('__fb_chat_plugin'));
+    console.log(fbcStatus.visibility);
     // if (isOpen == false) {
     //   $(".mbwph-call-main").removeClass("isHideElement");
     // }
