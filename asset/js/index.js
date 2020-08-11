@@ -35,6 +35,7 @@ jQuery(document).ready(function($){
       $(".mbwph-contact-container").removeClass("isButtonShow");
     });
     function showFBCPopup() {
+      var isOpen = true;
       FB.CustomerChat.showDialog();
       $(".mbwph-main-contact").addClass("isHideElement");
       $(".mbwph-call-main").addClass("isHideElement");
