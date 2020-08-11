@@ -43,6 +43,9 @@ jQuery(document).ready(function($){
       isOpen = false;
       console.log(isOpen);
     }
+    if (isOpen == false) {
+      $(".mbwph-call-main").removeClass("isHideElement");
+    }
 
   });
   //Hide button when click anywhere
