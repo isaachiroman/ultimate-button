@@ -34,12 +34,13 @@ jQuery(document).ready(function($){
       FB.Event.subscribe('customerchat.dialogShow', showFBCPopup());
       $(".mbwph-contact-container").removeClass("isButtonShow");
     });
+    var isOpen = true;
     function showFBCPopup() {
-      var isOpen = true;
       FB.CustomerChat.showDialog();
       $(".mbwph-main-contact").addClass("isHideElement");
       $(".mbwph-call-main").addClass("isHideElement");
       localStorage.setItem('MBWPH_FBC', isOpen);
+      isOpen = false;
     }
 
   });
