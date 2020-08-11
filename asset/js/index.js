@@ -41,6 +41,7 @@ jQuery(document).ready(function($){
       $(".mbwph-call-main").addClass("isHideElement");
       localStorage.setItem('MBWPH_FBC', isOpen);
       isOpen = false;
+      console.log(isOpen);
     }
 
   });
