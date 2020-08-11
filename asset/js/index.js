@@ -41,6 +41,7 @@ jQuery(document).ready(function($){
       $(".mbwph-call-main").addClass("isHideElement");
       localStorage.setItem('MBWPH_FBC', isOpen);
       isOpen = true;
+      console.log("retrievedObject: ", JSON.parse(fbcStatus));
     }
     var fbcStatus = localStorage.getItem('__fb_chat_plugin');
     console.log("retrievedObject: ", JSON.parse(fbcStatus));
